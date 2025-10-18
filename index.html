@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website ADHA - Profil Keluarga</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="background-overlay"></div>
+        <div class="hero-content">
+            <p class="brand-name">embracelets</p>
+            <h1 class="main-title">Hallo, Adha</h1>
+        </div>
+    </header>
+
+    <section class="gallery-section">
+        <div class="gallery-grid">
+            
+            <div class="gallery-card scroll-fade" style="animation-delay: 0.1s;">
+                <img src="image/Gambar 1.jpg" alt="Babeh">
+                <div class="overlay-icon"><span class="arrow-down">&#9660;</span></div>
+            </div>
+            
+            <div class="gallery-card scroll-fade" style="animation-delay: 0.2s;">
+                <img src="image/Gambar 2.jpg" alt="Anya">
+                <div class="overlay-icon"><span class="arrow-down">&#9660;</span></div>
+            </div>
+
+            <div class="gallery-card scroll-fade" style="animation-delay: 0.3s;">
+                <img src="image/Gambar 3.jpg" alt="Zidan">
+                <div class="overlay-icon"><span class="arrow-down">&#9660;</span></div>
+            </div>
+
+            <div class="gallery-card scroll-fade" style="animation-delay: 0.4s;">
+                <img src="image/Gambar 4.jpg" alt="Yoga">
+                <div class="overlay-icon"><span class="arrow-down">&#9660;</span></div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="profile-detail-section scroll-fade">
+        <div class="profile-layout-grid">
+            <div class="profile-image-col" style="background-image: url('image/Gambar 1.jpg');">
+            </div>
+            <div class="profile-info-col">
+                <h2>Babeh (orang tua)</h2>
+                <div class="divider"></div> 
+                <div class="contact-line">
+                    <a href="https://wa.me/6289677881795" target="_blank" class="whatsapp-link">
+                        <img src="image/Gambar WA.png" alt="Logo WhatsApp" class="wa-logo">
+                        </a>
+                </div>
+                <div class="divider"></div> 
+                <p class="alamat">Ds. bla bla, Kuningan, Jawa Barat</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="profile-detail-section scroll-fade">
+        <div class="profile-layout-grid reverse-layout">
+            <div class="profile-info-col">
+                <h2>Anya Maharani Putri(Orang Cumil)</h2>
+                <div class="divider"></div> 
+                <div class="contact-line">
+                    <a href="https://wa.me/6285155332612" target="_blank" class="whatsapp-link">
+                        <img src="image/Gambar WA.png" alt="Logo WhatsApp" class="wa-logo">
+                    </a>
+                </div>
+                <div class="divider"></div> 
+                <p class="alamat">Ds. Pagerwsi Rt.06/Rw. 04, Trucuk, Bojonegoro, Jawa Timur</p>
+            </div>
+            <div class="profile-image-col" style="background-image: url('image/Gambar 2.jpg');">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 ADHA. Dibuat dengan HTML & CSS.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.scroll-fade').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
